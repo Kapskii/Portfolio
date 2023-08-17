@@ -1,0 +1,148 @@
+:root {
+    --main-white: black;
+    --main-red: orangered;
+    --main-blue: black;
+    --main-gray: silver;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+
+    font-size: 60%;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.navlist {
+    display: flex;
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .navlist {
+
+        margin: 0 1rem;
+    }
+}
+
+.navlist a {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.navlist a:hover {
+    background: var(--main-white);
+    color: orangered;
+}
+
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg,
+            gray -200%,
+            black 160%);
+}
+
+.welcome-section>p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-family: 'Gill Sans' sans-serif;
+    color: var(--main-red);
+}
+
+.project-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    padding: 2rem 0.5rem;
+}
+
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 1px 1px 1px gray;
+    transition: transform 0.2s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateX(2px);
+}
+
+footer {
+    font-weight: 100;
+    display: flex;
+    padding: 2rem;
+    background: var(--main-gray);
+    border-top: 2px solid var(--main-red);
+}
+
+footer>p {
+    margin: 3rem;
+}
